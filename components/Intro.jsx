@@ -4,9 +4,9 @@ const Intro = () => {
     return (
         <div className="w-full flex flex-col gap-6 lg:gap-12">
             <div className="flex flex-col gap-10 font-montserrat text-[#FAFAFA]">
-                <h1 className="text-[30px] md:text-[45px] font-semibold leading-[110%]">Hi, I`&apos;`m <span className="text-red">Edward-Precious Omegbu</span></h1>
+                <h1 className="text-[30px] md:text-[45px] font-semibold leading-[110%]">Hi, I&apos;m <span className="text-red">Edward-Precious Omegbu</span></h1>
                 <p className="font-poppins font-normal text-sm lg:text-lg leading-[150%] tracking-normal">
-                    I like to build beautiful, fun and interactive things with code. I`&apos;`m dedicated to the quest of developing solutions that leverage on best practice technologies to deliver over the top user experiences.
+                    I like to build beautiful, fun and interactive things with code. I&apos;m dedicated to the quest of developing solutions that leverage on best practice technologies to deliver over the top user experiences.
                 </p>
             </div>
             <div className="flex gap-8">

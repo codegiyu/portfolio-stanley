@@ -25,6 +25,15 @@ const PROJECTS = [
         link: "https://musica-challenge.vercel.app"
     },
     {
+        img: "/images/projects/trivia.png", 
+        title: "Trivia Quiz", 
+        description: "Multichoice tivia quiz with different categories and questions fetched online", 
+        skills: [
+            "/images/skills/html5.svg", "/images/skills/css3.svg", "/images/skills/javascript.svg", "/images/skills/bootstrap.svg"
+        ],
+        link: "https://codegiyu.github.io/games/trivia.html"
+    },
+    {
         img: "/images/projects/hms.png", 
         title: "HMS", 
         description: "Hotel Management System (Group Project for KodeCamp 2.0)", 

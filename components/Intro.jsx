@@ -4,7 +4,7 @@ const Intro = () => {
     return (
         <div className="w-full flex flex-col gap-6 lg:gap-12">
             <div className="flex flex-col gap-10 font-montserrat text-[rgb(250,250,250)]">
-                <h1 className="text-[34px] md:text-[45px] font-bold leading-[110%]">
+                <h1 className="text-[36px] md:text-[50px] font-bold leading-[110%]">
                     Hi, I&apos;m <span className="text-red">Edward-Precious Omegbu</span>
                 </h1>
                 <p className="font-poppins font-normal text-sm lg:text-lg leading-[150%] tracking-normal">

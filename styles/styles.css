@@ -1498,6 +1498,14 @@ video {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
+
+  .md\:text-\[48px\]{
+    font-size: 48px;
+  }
+
+  .md\:text-\[50px\]{
+    font-size: 50px;
+  }
 }
 
 @media (min-width: 992px){

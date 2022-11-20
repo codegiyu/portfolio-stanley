@@ -27,7 +27,7 @@ const PROJECTS = [
     {
         img: "/images/projects/hms.png", 
         title: "HMS", 
-        description: "Hotel Management System", 
+        description: "Hotel Management System (Group Project for KodeCamp 2.0)", 
         skills: [
             "/images/skills/html5.svg", "/images/skills/css3.svg", "/images/skills/javascript.svg", "/images/skills/bootstrap.svg"
         ],

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import ErrorBoundary from '../components/ErrorBoundary'
 import Header from '../components/Header'
 import Intro from '../components/Intro'
@@ -66,7 +66,7 @@ export default function Home() {
     })
   },[windowWidth])
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     window.addEventListener("resize", handleResize)
   })
 
@@ -82,21 +82,33 @@ export default function Home() {
     <div className={"bg-darkBg min-h-screen w-full"}>
       <Head>
         <title>CodeGiyu - React Developer</title>
-        <meta name="description" content="Edward-Precious Omegbu is a Frontend React Developer that goes by the pseudonym CodeGiyu. He builds beautiful, fun and interactive things with code." />
+        <meta name="description" content="I'm Codegiyu, a Frontend React Developer. I build beautiful, fun and interactive things with code. Programmer portfolio website built with NextJS and Tailwind CSS." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:type" content="portfolio" />
+        <meta property="og:title" content="CodeGiyu - React Developer" />
+        <meta property="og:description" content="I'm Codegiyu, a Frontend React Developer. I build beautiful, fun and interactive things with code. Programmer portfolio website built with NextJS and Tailwind CSS." />
+        <meta property="og:image" content="https://i.postimg.cc/D0BPQqtq/codegiyu.png" />
+        <meta property="og:url" content="https://portfolio-codegiyu.vercel.app" />
+        <meta name="twitter:card" content="portfolio" />
+        <meta name="twitter:title" content="CodeGiyu - React Developer" />
+        <meta name="twitter:url" content="https://portfolio-codegiyu.vercel.app" />
+        <meta name="twitter:site" content="@TheLonerider20" />
+        <meta name="twitter:description" content="I'm Codegiyu, a Frontend React Developer. I build beautiful, fun and interactive things with code. Programmer portfolio website built with NextJS and Tailwind CSS." />
+        <meta name="twitter:image" content="https://i.postimg.cc/D0BPQqtq/codegiyu.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
-      <header className={`w-full px-4 sm:px-8 lg:px-[2.5rem] xl:px-16 bg-darkBg z-50 ${headerPosition}`}>
+      <header className={`w-full px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 bg-darkBg z-50 ${headerPosition}`}>
         <ErrorBoundary>
           <Header props={ headerProps } />
         </ErrorBoundary>
       </header>
 
       <main className={"w-full z-[1] mt-1"}>
-        <section id="about" ref={aboutRef} className="px-4 sm:px-8 lg:px-[2.5rem] xl:px-16 flex flex-col items-center gap-10 lg:flex-row 
+        <section id="about" ref={aboutRef} className="px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 flex flex-col items-center gap-10 lg:flex-row 
           lg:gap-16 lg:items-center lg:justify-between py-12"
         >
           <div className="flex-1">
@@ -115,7 +127,7 @@ export default function Home() {
             </ErrorBoundary>
           </div>
         </section>
-        <section id="services" ref={servicesRef} className="px-4 sm:px-8 lg:px-[2.5rem] xl:px-16 flex flex-col gap-16 py-12 my-12 lg:my-28">
+        <section id="services" ref={servicesRef} className="px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 flex flex-col gap-16 py-12 my-12 lg:my-28">
           <div className="">
             <ErrorBoundary>
               <SectionHeader props={ skillsHeaderProps } />
@@ -132,7 +144,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="works" ref={worksRef} className="px-4 sm:px-8 lg:px-[2.5rem] xl:px-16 flex flex-col gap-16 py-12 my-12 lg:my-28">
+        <section id="works" ref={worksRef} className="px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 flex flex-col gap-16 py-12 my-12 lg:my-28">
           <div className="">
             <ErrorBoundary>
               <SectionHeader props={ projectsHeaderProps } />
@@ -157,7 +169,7 @@ export default function Home() {
               <ContactHeader />
             </ErrorBoundary>
           </div>
-          <div className="px-4 sm:px-8 lg:px-[2.5rem] xl:px-16 xl:w-[1100px] xl:mx-auto">
+          <div className="px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 w-full sm:w-[450px] md:w-[600px] lg:w-full xl:w-[1100px] mx-auto">
             <ErrorBoundary>
               <ContactForm />
             </ErrorBoundary>
@@ -165,7 +177,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className={"px-4 sm:px-8 lg:px-[2.5rem] xl:px-16 w-full"}>
+      <footer className={"px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 w-full"}>
         <ErrorBoundary>
           <Footer />
         </ErrorBoundary>

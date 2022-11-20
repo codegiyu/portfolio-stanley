@@ -5,7 +5,7 @@ import WorkSingle from "./WorkSingle"
 const WorkSlideshow = ({array}) => {
     let [activeSlideIndex, setActiveSlideIndex] = useState([0,1])
     let [slidesDisplayed, setSlidesDisplayed] = useState([array[0], array[1]])
-    let [activeSlideIndexMobile, setActiveSlideIndexMobile] = useState([1])
+    let [activeSlideIndexMobile, setActiveSlideIndexMobile] = useState([0])
     let [slidesDisplayedMobile, setSlidesDisplayedMobile] = useState([array[0]])
 
 
@@ -73,12 +73,12 @@ const WorkSlideshow = ({array}) => {
                 )}
             </div>
 
-            <div onClick={prevSlideMobile}  className="lg:hidden flex absolute left-0 top-[45%] h-auto aspect-square rounded-full bg-[#FAFAFA] 
+            <div onClick={prevSlideMobile}  className="lg:hidden flex absolute left-0 top-[45%] h-auto sm:h-[10%] lg:h-auto aspect-square rounded-full bg-[#FAFAFA] 
                 hover:drop-shadow-[0_4px_15px_rgba(255,255,255,0.25)] justify-center items-center hover:shadow-lg"
             >
                 <span className="text-[36px] lg:text-[44px] font-bold"><Icon icon="uil:angle-left-b" /></span>
             </div>
-            <div onClick={nextSlideMobile}  className="lg:hidden flex absolute right-0 top-[45%] h-auto aspect-square rounded-full bg-[#FAFAFA]
+            <div onClick={nextSlideMobile}  className="lg:hidden flex absolute right-0 top-[45%] h-auto sm:h-[10%] lg:h-auto aspect-square rounded-full bg-[#FAFAFA]
                 hover:drop-shadow-[0_4px_15px_rgba(255,255,255,0.25)] justify-center items-center hover:shadow-lg"
             >
                 <span className="text-[36px] lg:text-[44px] font-bold"><Icon icon="uil:angle-right-b" /></span>

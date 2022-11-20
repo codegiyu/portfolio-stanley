@@ -1,8 +1,7 @@
 const nodemailer = require('nodemailer')
 require('dotenv').config()
 
-export default function (req, res) {  
-  // console.log(req.body, process.env.password)
+export default function (req, res) {
   const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.zoho.com",
@@ -14,7 +13,7 @@ export default function (req, res) {
   })
   const mailData = {
     from: "codegiyu@zohomail.com",
-    to: "eomegbu@gmail.com",
+    to: "codegiyu@gmail.com",
     subject: `Message From ${req.body.name}`,
     text: req.body.message + " | Sent from: " + req.body.email + " | Phone: " + req.body.phone,
     html: `<div>${req.body.message}</div><p>Sent from:
@@ -29,5 +28,4 @@ export default function (req, res) {
       res.status(200).json(info)
     }
   })
-  // res.status(200).end();
 }

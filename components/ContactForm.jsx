@@ -9,6 +9,7 @@ const ContactForm = () => {
     let [hasError, setHasError] = useState({ name: false, email: false, phone: false })
     let [errorValue, setErrorValue] = useState({ name: "", email: "", phone: "" })
     let [formSubmitted, setFormSubmitted] = useState(false)
+    let [isMailSending, setIsMailSending] = useState(false)
 
     let disabledColor = disabled ? "opacity-40" : ""
 
@@ -65,6 +66,7 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setIsMailSending(true)
 
         fetch("/api/contact", {
             method: "POST",
@@ -99,6 +101,7 @@ const ContactForm = () => {
             if (result.accepted.length) {
                 console.log(result)
                 setInputValue({ name: "", email: "", phone: "", message: "Your message" })
+                setIsMailSending(false)
                 setFormSubmitted(true)
             } else {
                 console.log(result)
@@ -177,7 +180,9 @@ const ContactForm = () => {
                     px-12 py-4 rounded-[10px] ${disabledColor} flex gap-3 items-center justify-center`} disabled={disabled}
                 >
                     <span>Submit Form</span>
-                    { formSubmitted 
+                    { isMailSending 
+                    ?   (<span className="text-2xl rounded-full bg-white"><Icon icon="line-md:loading-twotone-loop" color="green" /></span>)
+                    :   formSubmitted 
                     ?   (<span className="text-2xl rounded-full bg-white"><Icon icon="mdi:tick-circle" color="green" /></span>)
                     :   ""
                     }

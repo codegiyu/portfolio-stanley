@@ -6,7 +6,7 @@ const ProfilePhoto = () => {
             <Image src="/images/profile.jpg" 
             width={400} 
             height={535} 
-            alt="CodeGiyu"
+            alt="CodeGiyu - React Developer"
             className={"rounded-[10px] shadow-profile"} 
             priority 
             />

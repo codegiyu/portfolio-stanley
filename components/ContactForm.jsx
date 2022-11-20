@@ -169,7 +169,7 @@ const ContactForm = () => {
                 </div>
             </div>
             { formSubmitted 
-                ?   (<p className="text-base font-medium text-green-600 my-8">Mail Sent Successfully!</p>)
+                ?   (<p className="text-base font-semibold text-center text-green-600 my-8">Mail Sent Successfully!</p>)
                 :   ""
             }
             <div className="flex justify-center mt-8">

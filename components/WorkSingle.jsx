@@ -18,7 +18,7 @@ const WorkSingle = ({props}) => {
                 <div className="flex justify-center gap-4 lg:gap-8 items-center mt-6">
                     { skills.map((item,idx) => (
                             <div className="relative w-[30px] lg:w-[40px] aspect-square">
-                                <Image key={idx} alt="skill" src={ item } fill />
+                                <Image key={title + idx} alt="skill" src={ item } fill />
                             </div>
                         )
                     ) }

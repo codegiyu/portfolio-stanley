@@ -688,6 +688,11 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.my-8{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mt-1{
   margin-top: 0.25rem;
 }
@@ -1356,6 +1361,11 @@ video {
 .text-\[\#EB1414\]{
   --tw-text-opacity: 1;
   color: rgb(235 20 20 / var(--tw-text-opacity));
+}
+
+.text-green-600{
+  --tw-text-opacity: 1;
+  color: rgb(22 163 74 / var(--tw-text-opacity));
 }
 
 .opacity-40{

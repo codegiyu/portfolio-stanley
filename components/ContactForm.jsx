@@ -168,6 +168,10 @@ const ContactForm = () => {
                     </ErrorBoundary>
                 </div>
             </div>
+            { formSubmitted 
+                ?   (<p className="text-base font-medium text-green-600 my-8">Mail Sent Successfully!</p>)
+                :   ""
+            }
             <div className="flex justify-center mt-8">
                 <button type="submit" className={`bg-red text-[#FAFAFA] text-base leading-[100%] font-medium 
                     px-12 py-4 rounded-[10px] ${disabledColor} flex gap-3 items-center justify-center`} disabled={disabled}

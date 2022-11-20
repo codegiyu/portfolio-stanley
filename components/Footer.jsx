@@ -9,7 +9,7 @@ const Footer = () => {
                 </p>
             </div>
             <div className="">
-                <p className="text-ash">{"&copy; 2022"}</p>
+                <p className="text-ash">Copyright &copy; 2022</p>
             </div>
         </div>
     )

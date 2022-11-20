@@ -17,7 +17,7 @@ const WorkSingle = ({props}) => {
                 <p className="text-sm lg:text-base font-semibold">{ description }</p>
                 <div className="flex justify-center gap-4 lg:gap-8 items-center mt-6">
                     { skills.map((item,idx) => (
-                            <div className="relative w-[30px] lg:w-[40px] aspect-square">
+                            <div key={title + idx + 100} className="relative w-[30px] lg:w-[40px] aspect-square">
                                 <Image key={title + idx} alt="skill" src={ item } fill />
                             </div>
                         )

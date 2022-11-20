@@ -72,7 +72,7 @@ export default function Home() {
 
   useEffect(() => {
     menuOpen ? blockScroll() : allowScroll()
-  }, [menuOpen])
+  }, [menuOpen, allowScroll, blockScroll])
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)

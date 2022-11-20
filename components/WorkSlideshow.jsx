@@ -42,7 +42,7 @@ const WorkSlideshow = ({array}) => {
         <div className="w-full relative">
             <div className="slides overflow-x-hidden hidden lg:flex gap-8 items-stretch flex-nowrap">
                 { slidesDisplayed.map((item,idx) => (
-                    <div className="w-full lg:w-projectHalf flex-none">
+                    <div key={"div" + idx} className="w-full lg:w-projectHalf flex-none">
                         <WorkSingle key={idx} props={item} />
                     </div>
                 ))}
@@ -50,7 +50,7 @@ const WorkSlideshow = ({array}) => {
 
             <div className="slides overflow-x-hidden lg:hidden flex items-stretch">
                 { slidesDisplayedMobile.map((item,idx) => (
-                    <div className="w-full flex-none">
+                    <div key={"divMob" + idx + 200} className="w-full flex-none">
                         <WorkSingle key={idx+200} props={item} />
                     </div>
                 ))}

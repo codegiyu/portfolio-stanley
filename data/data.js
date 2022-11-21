@@ -25,7 +25,7 @@ const PROJECTS = [
         link: "https://musica-challenge.vercel.app"
     },
     {
-        img: "/images/projects/trivia.png", 
+        img: "/images/projects/trivia.PNG", 
         title: "Trivia Quiz", 
         description: "Multichoice tivia quiz with different categories and questions fetched online", 
         skills: [

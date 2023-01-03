@@ -16,6 +16,15 @@ export const SKILLS = [
 
 const PROJECTS = [
     {
+        img: "/images/projects/debt-management.png", 
+        title: "Debt Management", 
+        description: "Mock simple website for Debt Management Office Nigeria", 
+        skills: [
+            "/images/skills/react.svg", "/images/skills/tailwindcss.svg", "/images/skills/nodejs.svg", "/images/skills/express.svg",
+            "/images/skills/mongodb.svg"],
+        link: "https://debt-management.vercel.app"
+    },
+    {
         img: "/images/projects/musica.png", 
         title: "Musica", 
         description: "Music streaming website with Spotify API", 
@@ -51,15 +60,6 @@ const PROJECTS = [
             "/images/skills/jquery.svg", "/images/skills/php.svg"
         ],
         link: "http://omorofan.com.ng"
-    },
-    {
-        img: "/images/projects/slides.png", 
-        title: "Profile Slideshow", 
-        description: "Profile slideshow for a team", 
-        skills: [
-            "/images/skills/html5.svg", "/images/skills/css3.svg", "/images/skills/javascript.svg", "/images/skills/bootstrap.svg"
-        ],
-        link: "https://codegiyu.github.io/alert"
     },
     {
         img: "/images/projects/countries.png", 

@@ -1,38 +1,25 @@
-import Image from "next/image"
+import Image from "next/image";
+import me from "../public/images/about-index.png";
 
 const Intro = () => {
     return (
-        <div className="w-full flex flex-col gap-6 lg:gap-12">
-            <div className="flex flex-col gap-10 font-montserrat text-[rgb(250,250,250)]">
-                <h1 className="text-[36px] md:text-[50px] font-bold leading-[110%]">
-                    Hi, I&apos;m <span className="text-red">Edward-Precious Omegbu</span>
-                </h1>
-                <p className="font-poppins font-normal text-sm lg:text-lg leading-[150%] tracking-normal">
-                    {/* A.K.A. <span className="text-red text-base lg:text-xl font-semibold">Codegiyu. </span> */}
-                    I like to build beautiful, fun and interactive things with code. I&apos;m dedicated to the quest of developing solutions that leverage on best practice technologies to deliver over the top user experiences.
+        <div className="w-full flex flex-col gap-6 lg:gap-[80px] font-montserrat bg-black px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-20 py-[80px]">
+            <div className="w-full flex flex-col lg:flex-row gap-14 lg:gap-[260px]">
+                <div className="flex flex-col gap-[40px] w-[300px] items-center">
+                    <h2 className="font-semibold text-[40px] leading-[49px] text-white">About Me</h2>
+                    <div className="relative w-[200px] aspect-square bg-white70 rounded-full">
+                        <Image src={ me } fill alt="me" />
+                    </div>
+                </div>
+                <p className="text-[#FAFAFA] text-2xl leading-none max-w-[840px]">
+                    I'm an experienced UI/UX designer with hands on experience in designing mobile and web applications. 
+                    I have proven experience building products for E-Commerce industry. <br/><br/><br/> I have a very skill in  user research, 
+                    wireframing, prototyping, i have expertise in the use of typography, layout, and color in visual communication 
+                    and I'm proficient in using most design tools.
                 </p>
             </div>
-            <div className="flex gap-8">
-                <a href="https://twitter.com/TheLonerider20">
-                    <div className="relative w-[22px] lg:w-[30px] aspect-square">
-                        <Image src={"/images/twitter.svg"} alt="twitter" fill loading="eager" />
-                    </div>
-                </a>
-                <a href="https://github.com/codegiyu">
-                    <div className="relative w-[22px] lg:w-[30px] aspect-square">
-                        <Image src={"/images/github.svg"} alt="github" fill loading="eager" />
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/edward-precious-omegbu">
-                    <div className="relative w-[22px] lg:w-[30px] aspect-square">
-                        <Image src={"/images/linkedin.svg"} alt="linkedin" fill loading="eager" />
-                    </div>
-                </a>
-                <a href="https://wa.me/message/7QB2Q45GBV7AG1">
-                    <div className="relative w-[22px] lg:w-[30px] aspect-square">
-                        <Image src={"/images/whatsapp.svg"} alt="whatsapp" fill loading="eager" />
-                    </div>
-                </a>
+            <div>
+
             </div>
         </div>
     )

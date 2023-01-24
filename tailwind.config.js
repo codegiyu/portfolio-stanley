@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     screens: {
       "xs": "350px",
-      "sm": "500px",
+      "sm": "425px",
       "md": "768px",
       "lg": "992px",
       "xl": "1200px",
@@ -23,29 +23,22 @@ module.exports = {
     },
     extend: {
       colors: {
-        darkBg: "#15161B",
-        dark: "#1E1F23",
-        darkOpaque: "#00000099",
-        red: "#C81313",
-        ash: "#666874",
-        darkAsh: "#66687442"
+        blue: "#3A6EF1",
+        grey: "#666874",
+        grey42: "#66687442",
+        white20: "#FFFFFF20",
+        white70: "#FFFFFF70",
+        black20: "#00000020",
+        black70: "#00000070",
+        black44: "#00000044",
+        lightGrey70: "#D9D9D970"
       },
       boxShadow: {
         profile: '0 4px 20px rgba(255, 252, 252, 0.25)',
       },
       fontFamily: {
         montserrat: ["'Montserrat'", "sans-serif"],
-        poppins: ["'Poppins'", "sans-serif"],
-        lobster: ["'Lobster'", "cursive"]
-      },
-      animation: {
-        rebound: "spring 10s ease-in-out infinite"
-      },
-      keyframes: {
-        spring: {
-          "0%, 100%": { transform: "translateX(-95%)" },
-          "50%": { transform: "translateX(245%)" }
-        }
+        alternate: ["'Montserrat Alternates'", "sans-serif"]
       },
       spacing: {
         textarea: "calc(100% - 24px)",

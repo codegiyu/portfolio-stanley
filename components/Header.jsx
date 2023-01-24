@@ -1,106 +1,46 @@
 import Link from "next/link"
-import ScrollspyNav from "react-scrollspy-nav"
 
-const Header = ({ props }) => {
+const Header = (props) => {
     let {
-        page = "home",
-        menuOpen, 
-        setMenuOpen, 
-        refs = null, 
-        topPositions = null,
-        pageScrollPosition = 0
-    } = props
+        page = "home"
+    } = props.obj
 
-    let vOffset = 300
+    const handleMenuClick = () => {
 
-    let menuClass1 = menuOpen ? "rotate-45 w-[30px] bg-red" : "rotate-0 w-8 bg-ash"
-    let menuClass2 = menuOpen ? "opacity-0" : "opacity-100"
-    let menuClass3 = menuOpen ? "-rotate-45 w-[30px] bg-red" : "rotate-0 w-8 bg-ash"
-    let aboutScrollspy = pageScrollPosition < topPositions.services - vOffset ? "text-red" : ""
-    let servicesScrollspy = pageScrollPosition >= topPositions.services - vOffset && pageScrollPosition < topPositions.works - vOffset ? "text-red" : ""
-    let worksScrollspy = pageScrollPosition >= topPositions.works - vOffset && pageScrollPosition < topPositions.contact - vOffset ? "text-red" : ""
-    let contactScrollspy = pageScrollPosition >= topPositions.contact - vOffset ? "text-red" : ""
-
-    let menuRotate = menuOpen ? "rotate-0" : "rotate-180"
-
-    const handleMenuClick = () => setMenuOpen(!menuOpen)
-    const handleLinkClick = (e) => {
-        e.preventDefault()
-        setMenuOpen(!menuOpen)
-        let clicked = e.target.getAttribute("href").replace("#", "")
-        console.log()
-        refs[clicked].current.scrollIntoView({behaviour: "smooth"})
     }
 
     return(
-        <section className={`w-full flex justify-between items-center font-montserrat z-10`}>
+        <section className={`w-full relative flex flex-col lg:flex-row justify-between bg-transparent items-center font-montserrat py-8 lg:py-16`}>
             <div>
                 <Link href={"/"}>
-                    <p className="text-white text-3xl font-semibold font-lobster leading-[100%]">
-                        <span className="text-5xl">C</span>
-                        ode
-                        <span className="text-red">giyu</span>
+                    <p className="text-blue text-[32px] font-bold font-alternate leading-[40px]">
+                        <span className="">Stan</span>
+                        <span className={`${ page === "home" ? "text-black" : "text-white" }`}>ley</span>
                     </p>
                 </Link>
             </div>
-            <nav className="hidden lg:block font-semibold text-lg leading-[100%] text-ash">
-                {page === "home" && 
-                    (<ScrollspyNav
-                    scrollTargetIds={["about", "services", "works", "contact"]}
-                    offset={0}
-                    activeNavClass="text-red"
-                    scrollDuration="1000"
-                    headerBackground="true"
-                >
-                    <ul className="flex gap-10">
-                        <li>
-                            <a href="#about" className="hover:text-red">About Me</a>
-                        </li>
-                        <li>
-                            <a href="#services" className="hover:text-red">Services</a>
-                        </li>
-                        <li>
-                            <a href="#works" className="hover:text-red">Works</a>
-                        </li>
-                        <li>
-                            <a href="#contact" className="hover:text-red">Contact Me</a>
-                        </li>
-                    </ul>
-                </ScrollspyNav>)}
+            <nav className="hidden lg:block font-semibold text-xl leading-[100%]">
+                <ul className="flex gap-10">
+                    <li>
+                        <a href="/" className={`${ page === "home" ? "text-blue" : "text-grey hover:text-blue" }`}>Home</a>
+                    </li>
+                    <li>
+                        <a href="/about" className={`${ page === "about" ? "text-blue" : "text-grey hover:text-blue" }`}>About Me</a>
+                    </li>
+                    <li>
+                        <a href="/works" className={`${ page === "works" ? "text-blue" : "text-grey hover:text-blue" }`}>Works</a>
+                    </li>
+                    <li>
+                        <a href="/contact" className={`${ page === "contact" ? "text-blue" : "text-grey hover:text-blue" }`}>Contact</a>
+                    </li>
+                </ul>
             </nav>
-            <div className="lg:hidden flex flex-col gap-[6px] z-[60] mt-4" onClick={handleMenuClick}>
-                <span className={` h-1 rounded-[2px] origin-top-left transition-all ${menuClass1}`}></span>
-                <span className={`w-8 h-1 bg-ash rounded-[2px] transition-all ${menuClass2}`}></span>
-                <span className={` h-1 rounded-[2px] origin-bottom-left transition-all ${menuClass3}`}></span>
-            </div>
-            <div className={`fixed bottom-0 left-0 h-[100%] w-full bg-darkOpaque z-50 flex justify-center origin-top-right ${menuRotate} 
-                transition-transform duration-500 items-end`}
-            >
-                <nav className="bg-dark w-full h-4/5 rounded-[60px] text-[#FAFAFA] font-semibold text-2xl">
-                    {
-                        (<ScrollspyNav
-                            scrollTargetIds={["about", "services", "works", "contact"]}
-                            offset={0}
-                            activeNavClass="text-red"
-                            scrollDuration="1000"
-                            headerBackground="true"
-                        >
-                            <ul className="w-full h-[70vh] flex flex-col justify-center items-center gap-10 md:gap-20">
-                                <li>
-                                    <a href="#about" className={`hover:text-red ${aboutScrollspy}`} onClick={ handleLinkClick }>About Me</a>
-                                </li>
-                                <li>
-                                    <a href="#services" className={`hover:text-red ${servicesScrollspy}`} onClick={ handleLinkClick }>Services</a>
-                                </li>
-                                <li>
-                                    <a href="#works" className={`hover:text-red ${worksScrollspy}`} onClick={ handleLinkClick }>Works</a>
-                                </li>
-                                <li>
-                                    <a href="#contact" className={`hover:text-red ${contactScrollspy}`} onClick={ handleLinkClick }>Contact Me</a>
-                                </li>
-                            </ul>
-                        </ScrollspyNav>)}
-                </nav>
+            <div className="w-full flex lg:hidden justify-start">
+                <div className="lg:hidden flex flex-col gap-[6px] z-[60]" onClick={handleMenuClick}>
+                    <span className={`${ page === "home" ? "bg-black" : "bg-white" } w-8 h-1 rounded-[2px] origin-top-left transition-all`}></span>
+                    <span className={`${ page === "home" ? "bg-black" : "bg-white" } w-8 h-1 rounded-[2px] transition-all`}></span>
+                    <span className={`${ page === "home" ? "bg-black" : "bg-white" } w-8 h-1 rounded-[2px] origin-bottom-left transition-all`}></span>
+                </div>
             </div>
         </section>
     )

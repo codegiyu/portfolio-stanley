@@ -1,25 +1,23 @@
 import Image from "next/image";
 
 const WorkSingle = ({props}) => {
-    let {img, title, description, skills, link} = props
+    let {img, title, description, link} = props
 
     return (
-        <div className="w-full flex-none flex flex-col rounded-[20px] bg-dark text-center text-ash font-montserrat 
-            overflow-hidden pb-8"
+        <div className="w-full flex-none flex flex-col lg:flex-row-reverse rounded-[30px] bg-grey42 text-white font-montserrat 
+            overflow-hidden px-12 py-[120px] lg:items-center gap-[80px]"
         >
-            <div className="w-full aspect-[1.8] relative">
+            <div className="w-full lg:w-1/2 aspect-[1.372] rounded-[20px] relative">
                 <Image src={ img } alt={title} fill loading="eager" />
             </div>
-            <a href={ link }><h3 className="text-red text-2xl lg:text-[32px] hover:underline hover:underline-offset-8 font-bold my-4">{ title }</h3></a>
-            <p className="text-sm lg:text-base font-semibold">{ description }</p>
-            <div className="flex justify-center gap-4 lg:gap-8 items-center mt-6">
-                { skills.map((item,idx) => (
-                        <div key={title + idx + 100} className="relative w-[30px] lg:w-[40px] aspect-square">
-                            <Image key={title + idx} alt="skill" src={ item } fill />
-                        </div>
-                    )
-                ) }
+            <div className="">
+                <h2 className="font-bold lg:text-[64px] leading-[100%]">{ title }</h2>
+                <p className="text-sm font-medium lg:text-[32px] leading-[100%] text-[#FAFAFA] my-[42px]">{ description }</p>
+                <a href={ link } className="text-sm font-medium lg:text-[32px] leading-[100%] hover:underline hover:underline-offset-8">
+                    <p >View Project</p>
+                </a>
             </div>
+            
         </div>
     )
 }

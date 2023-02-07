@@ -3,6 +3,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import WORKS from '../data/data';
+import WorkSingle from '../components/WorkSingle';
 
 export default function Contact() {
 
@@ -39,7 +40,7 @@ export default function Contact() {
                 </ErrorBoundary>
             </header>
 
-            <main className={"w-full md:w-4/5 xl:w-[1080px] px-4 mx-auto z-[3] text-white font-montserrat"}>
+            <main className={"w-full md:w-4/5 xl:w-[90%] px-4 mx-auto z-[3] text-white font-montserrat"}>
                 <section>
                     <h1 className="font-semibold text-6xl md:text-[70px] xl:text-[5vw] leading-[100%] text-center mt-16 kg:mt-[140px]">
                         Works
@@ -49,7 +50,7 @@ export default function Contact() {
                     </p>
                 </section>
                 <section className="w-full pt-20 pb-14">
-                    
+                    { WORKS.map(item => <WorkSingle props={item} />)}
                 </section>
             </main>
 

@@ -57,7 +57,7 @@ const WORKS = [
         link: "https://codegiyu.github.io/HMS/dashboard.html"
     },
     {
-        img: "/images/tack.jpg", 
+        img: "/images/tack.png", 
         title: "Tack", 
         description: "A Wine Ordering App",
         link: "http://omorofan.com.ng"

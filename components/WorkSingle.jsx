@@ -5,7 +5,7 @@ const WorkSingle = ({props}) => {
 
     return (
         <div className="w-full flex-none flex flex-col lg:flex-row-reverse rounded-[30px] bg-grey42 text-white font-montserrat 
-            overflow-hidden px-12 py-[120px] lg:items-center gap-[80px]"
+            overflow-hidden px-12 py-[120px] lg:items-center gap-[80px] mb-8 md:mb-16 lg:mb-20 xl:mb-24"
         >
             <div className="w-full lg:w-1/2 aspect-[1.372] rounded-[20px] relative">
                 <Image src={ img } alt={title} fill loading="eager" />

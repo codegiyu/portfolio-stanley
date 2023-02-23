@@ -3,6 +3,7 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import Intro from '../components/Intro';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
+import ContactSection from '../components/ContactSection';
 
 export default function Home() {
 
@@ -47,6 +48,11 @@ export default function Home() {
         <ErrorBoundary>
           <Intro />
         </ErrorBoundary>
+        <section>
+          <ErrorBoundary>
+            <ContactSection />
+          </ErrorBoundary>
+        </section>
       </main>
 
       <footer className={"px-4 sm:px-8 md:px-16 lg:px-[2.5rem] xl:px-16 w-full pt-12 pb-[200px]"}>

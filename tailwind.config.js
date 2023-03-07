@@ -1,13 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,jsx,ts,tsx}", "./components/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     screens: {
-      "xs": "350px",
-      "sm": "425px",
-      "md": "768px",
-      "lg": "992px",
-      "xl": "1200px",
+      xs: "350px",
+      sm: "425px",
+      md: "768px",
+      lg: "992px",
+      xl: "1200px",
       "2xl": "1536px",
     },
     container: {
@@ -31,22 +34,22 @@ module.exports = {
         black20: "#00000020",
         black70: "#00000070",
         black44: "#00000044",
-        lightGrey70: "#D9D9D970"
+        lightGrey70: "#D9D9D970",
+        red: "#E45F5F",
+        green: "#04FF22"
       },
       boxShadow: {
-        profile: '0 4px 20px rgba(255, 252, 252, 0.25)',
+        profile: "0 4px 20px rgba(255, 252, 252, 0.25)",
       },
       fontFamily: {
         montserrat: ["'Montserrat'", "sans-serif"],
-        alternate: ["'Montserrat Alternates'", "sans-serif"]
+        alternate: ["'Montserrat Alternates'", "sans-serif"],
       },
       spacing: {
         textarea: "calc(100% - 24px)",
-        projectHalf: "calc(50% - 1rem)"
-      }
+        projectHalf: "calc(50% - 1rem)",
+      },
     },
   },
-  plugins: [
-    require("tailwind-scrollbar-hide")
-  ],
-}
+  plugins: [require("tailwind-scrollbar-hide")],
+};

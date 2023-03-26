@@ -24,7 +24,7 @@ const Alert = (props) => {
     }
 
     return (
-        <div className="w-[90%] md:w-[500px] fixed top-[80px] left-[50%] -translate-x-[50%]">
+        <div className="w-[90%] md:w-[500px] fixed top-[120px] left-[50%] -translate-x-[50%]">
             <div className={`w-full px-4 py-2 flex gap-6 items-center justify-between ${background} text-white font-inter rounded-md`}>
                 <p className="text-white">{ alert.message }</p>
                 <button onClick={ handleCancelAlert } className="font-semibold text-sm bg-transparent outline-none border-none active:scale-95">

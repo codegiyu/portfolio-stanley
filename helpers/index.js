@@ -1,7 +1,10 @@
 import allFieldsAreErrorFree from "./allFieldsAreErrorFree";
+import { allFieldsAreNotEmpty } from "./allFieldsAreErrorFree";
 
 const helpers = {
-    allFieldsAreErrorFree
+    allFieldsAreErrorFree,
+    allFieldsAreNotEmpty,
+
 }
 
 export default helpers;

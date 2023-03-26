@@ -36,7 +36,7 @@ module.exports = {
         black44: "#00000044",
         lightGrey70: "#D9D9D970",
         red: "#E45F5F",
-        green: "#04FF22"
+        green: "#1f780b",
       },
       boxShadow: {
         profile: "0 4px 20px rgba(255, 252, 252, 0.25)",
